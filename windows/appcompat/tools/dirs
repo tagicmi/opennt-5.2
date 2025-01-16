@@ -1,0 +1,11 @@
+DIRS=DumpSDB                    \
+     qfixapp                    \
+     acBrowser                  \
+     sdbinst                    \
+     grabmi                     \
+     demoapp{x86}               \
+     infstrip		            \
+     CompatAdminXP{x86}         \
+     fcopy						\
+     toolkit					\
+     shimviewer

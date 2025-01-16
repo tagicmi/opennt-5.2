@@ -1,0 +1,16 @@
+The code should work when compiled normally with the build system,
+but the original winlogon.exe uses a precompiled shortsig.lib,
+so if you want to get the same binary code as in the original,
+you'll need some extra steps.
+
+Get the compiler from VC6SP5 (maybe some other versions are okay too,
+but the one from the build system is definitely too new).
+Take the compile flags for sigpriv.c from the build system and drop "/G6".
+Also, append "/Foobj\i386\" or manually copy the resulting obj to obj\i386\.
+The resulting command line should be like this:
+cl -nologo -Ii386\ -I. -ID:\temp\xp\public\internal\Base\inc -Iobj\i386 -ID:\temp\xp\DS\inc -ID:\temp\xp\DS\inc\obj\i386 -ID:\temp\xp\public\internal\DS\inc -ID:\temp\xp\public\oak\inc -ID:\temp\xp\public\sdk\inc -ID:\temp\xp\public\sdk\inc\crt -D_X86_=1 -Di386=1  -DSTD_CALL -DCONDITION_HANDLING=1 -DNT_UP=1  -DNT_INST=0 -DWIN32=100 -D_NT1X_=100 -DWINNT=1 -D_WIN32_WINNT=0x0501 /DWINVER=0x0501 -D_WIN32_IE=0x0600    -DWIN32_LEAN_AND_MEAN=1 -DDEVL=1 -D__BUILDMACHINE__=AUserName -DFPO=1  -DNDEBUG -DWIN32 -D_WIN32 -DUNICODE -D_UNICODE     /c /Zel /Zp8 /Gy  /W3 /WX /WX /Gz  /QIfdiv- /QIf /Gi- /Gm- /GX-  /GR- /GF  -Z7 /Oxs /Oy   -FID:\temp\xp\public\sdk\inc\warning.h   .\sigpriv.c /Foobj\i386\
+Run the compiler. Then run the build system as usual, it will use
+the manually compiled sigpriv.obj.
+
+(Presumably the same compiler should be used for other files in this library,
+but sigkeyg.c is too trivial for that to make any difference.)

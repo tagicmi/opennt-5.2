@@ -1,0 +1,7 @@
+The code should work when compiled normally with the build system,
+but the original winlogon.exe uses a precompiled shortsig00.lib,
+so if you want to get the same binary code as in the original,
+you'll need to disable the optimizations and get the compiler from VC6SP5
+(because of disabled optimizations the exact version isn't that important,
+but the one from the build system insists on aligning stack variables
+with size >= 64 bytes on 8-byte boundary, it will give a few diffs).

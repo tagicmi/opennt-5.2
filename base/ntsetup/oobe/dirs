@@ -1,0 +1,22 @@
+!IF 0
+
+    This file is used by build.exe to determine which directories
+    in which to build.  They are entered in order listed.
+	
+	oobebaln is missing oobebaln.c, so we're not building it.
+
+!ENDIF
+
+
+DIRS=           \
+    idl         \
+    common      \
+    msoobe      \
+    msobweb     \
+    msobcomm    \
+    msobmain    \
+    msobshel    \
+    msobdl      \
+    html        \
+    data        \
+

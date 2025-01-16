@@ -1,0 +1,8 @@
+DIRS=\
+    Professional \
+    Mallard 	 \
+    Luna         \
+    Embedded     \
+    Royale       \
+    Zune         \
+    ShellStyle
