@@ -11,7 +11,7 @@ The **OpenNT 5.2** project is an open-source initiative aimed at creating a mode
 
 ## Installation
 
-- 1. Create and install Windows 10’s latest version virtual machine, with minimum 120GB disk space and 4GB memory and processor cores
+- *1.* Create and install Windows 10’s latest version virtual machine, with minimum 120GB disk space and 4GB memory and processor cores
 
 
 - 2. Allocate D:\ disk drive for entire source code (min. 60GB)
