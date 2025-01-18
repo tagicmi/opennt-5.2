@@ -11,58 +11,67 @@ The **OpenNT 5.2** project is an open-source initiative aimed at creating a mode
 
 ## Installation
 
-** 1. Download the source code**: Clone this repository to your local machine.
+- **1. Create and install Windows 10’s latest version virtual machine, with minimum 120GB disk space and 4GB memory and processor cores
 
+
+- **2. Allocate D:\ disk drive for entire source code (min. 60GB)
+
+
+- **3. Change CD-ROM drive to G:\ (for getting missing files if neccesary)
+
+
+- **4. Disable User Account Control - needs for avoid screens of confirmation
+
+
+- **5. Download source code from link below
+  
    ```bash
    git clone https://github.com/tagicmi/Opennt-5.2.git
   ```
-
-** 2. Create and install Windows 10’s latest version virtual machine, with minimum 120GB disk space and 4GB memory and processor cores
-
-
-** 3. Allocate D:\ disk drive for entire source code (min. 60GB)
+  # Important! Disable Real-Time Protection from Windows Security
 
 
-** 4. Change CD-ROM drive to G:\ (for getting missing files if neccesary)
+- **6. Extract source code to D:\srv03rtm
 
 
-** 5. Disable User Account Control - needs for avoid screens of confirmation
+- **7. Uncheck read-only from srv03rtm folder
 
 
-** 6. Download source code from link below
+- **8. If your host is Windows 10 1809 and later, install driver.pfx from “tools” folder for Local Machine & Current User, else if your host is up to Windows Vista delete driver.pfx, and rename driver_3des.pfx to that.
 
 
-** 7. Important! Disable Real-Time Protection from Windows Security
+- **9. Run Command Prompt as Administrator, and switch to D:\srv03rtm.
 
 
-** 8. Extract source code to D:\srv03rtm
+- **10. If you’re on x64 host, run:
+```bash
+tools\razzle64 free offline
+```
+else: 
+```bash
+tools\razzle free offline
+```
 
 
-** 9. Uncheck read-only from srv03rtm folder
+- **11. Run this for prepare to building
+  ```bash
+  tools\prebuild
+  ```
 
 
-** 10. If your host is Windows 10 1809 and later, install driver.pfx from “tools” folder for Local Machine & Current User, else if your host is up to Windows Vista delete driver.pfx, and rename driver_3des.pfx to that.
+- **12. Type this:            (-M 4 for using all 4 cores of processor)
+```bash
+ build /cZP -M 4
+```
 
 
-** 11. Run Command Prompt as Administrator, and switch to D:\srv03rtm.
+- **13. Type on CMD
+```bash
+  tools\postbuild -full
+```
 
 
-** 12. If you’re on x64 host, run tools\razzle64 free offline, else: tools\razzle free offline
-
-
-** 13. Run tools\prebuild for prepare to building
-
-
-** 14. Type build /cZP -M 4 (-M 4 for using all 4 cores of processor)
-
-
-** 15. Extract missing binaries to D:\binaries.x86fre
-
-
-** 16. Type on CMD tools\postbuild -full
-
-
-** 17. Then, write tools\oscdimg pro|per|srv for generating ISO file for XP Professional/Home Edition/Server 2003 Standard Edition
+- **17. Then, write tools\oscdimg pro|per|srv for generating ISO file for XP Professional/Home Edition/Server 2003 Standard Edition
 
 
 # Serial key located at srv03rtm\base\ntsetup\pidgen\pidgen\spidgen.cpp, and it’s 
