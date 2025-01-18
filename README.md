@@ -54,9 +54,9 @@ tools\razzle free offline
 
 
 - **11. Run this for prepare to building
-  ```bash
+```bash
   tools\prebuild
-  ```
+```
 
 
 - **12. Type this:            (-M 4 for using all 4 cores of processor)
