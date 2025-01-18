@@ -31,16 +31,16 @@ The **OpenNT 5.2** project is an open-source initiative aimed at creating a mode
   # Important! Disable Real-Time Protection from Windows Security
 
 
-- *6.* Extract source code to D:\srv03rtm
+- *6.* Extract source code to D:\opennt-5.2
 
 
-- *7.* Uncheck read-only from srv03rtm folder
+- *7.* Uncheck read-only from opennt-5.2 folder
 
 
 - *8.* If your host is Windows 10 1809 and later, install driver.pfx from “tools” folder for Local Machine & Current User, else if your host is up to Windows Vista delete driver.pfx, and rename driver_3des.pfx to that.
 
 
-- *9.* Run Command Prompt as Administrator, and switch to D:\srv03rtm.
+- *9.* Run Command Prompt as Administrator, and switch to D:\opennt-5.2.
 
 
 - *10*. If you’re on x64 host, run:
@@ -74,7 +74,7 @@ tools\razzle free offline
 - *14.* Then, write tools\oscdimg pro|per|srv for generating ISO file for XP Professional/Home Edition/Server 2003 Standard Edition
 
 
-# Serial key located at srv03rtm\base\ntsetup\pidgen\pidgen\spidgen.cpp, and it’s 
+# Serial key located at opennt-5.2\base\ntsetup\pidgen\pidgen\spidgen.cpp, and it’s 
 
 ```bash
 HB9CF-JTKJF-722HV-VPBRF-9VKVM
