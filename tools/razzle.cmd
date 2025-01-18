@@ -596,7 +596,7 @@ popd
 @rem Get the branch name for this enlistment
 @rem
 if "%_ArgOffline%" == "true" (
-    set _BuildBranch=srckit
+    set _BuildBranch=main
 ) else (
     for /f "eol=# tokens=1,2*" %%i in (%_NTBINDIR%\sd.map) do if "%%i" == "BRANCH" set _BuildBranch=%%k
 )
