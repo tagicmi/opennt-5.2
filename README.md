@@ -71,11 +71,17 @@ tools\razzle free offline
 ```
 
 
-- *14.* Then, write tools\oscdimg pro|per|srv for generating ISO file for XP Professional/Home Edition/Server 2003 Standard Edition
+- *14.* Then, write this for generating ISO file for XP Professional/Home Edition/Server 2003 Standard Edition
+```bash
+  tools\oscdimg pro|per|srv
+```
 
-
-# Serial key located at opennt-5.2\base\ntsetup\pidgen\pidgen\spidgen.cpp, and it’s 
+# Serial key is: 
 
 ```bash
 HB9CF-JTKJF-722HV-VPBRF-9VKVM
+```
+else:
+```bash
+99999-99999-99999-99999-99999
 ```
