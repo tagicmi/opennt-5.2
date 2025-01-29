@@ -861,7 +861,7 @@ Language=English
 MessageID=210 SymbolicName=STR_DTBS_PRODUCTID
 Severity=Success
 Language=English
-%wsWindows %ws
+%wsOpenNT %ws
 .
 
 MessageID=211 SymbolicName=STR_DTBS_PRODUCTBUILD
